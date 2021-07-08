@@ -5,7 +5,6 @@ import Navbars from './Components/Navbars';
 import MovieList from './Components/MovieList';
 import "bootstrap/dist/css/bootstrap.min.css";
 import AddMovie from './Components/AddMovie';
-import ErrorPage from './Components/ErrorPage';
 import DescriptionMovie from './Components/DescriptionMovie';
 
 
@@ -116,26 +115,21 @@ const App = () => {
                   
                   <Navbars setsearchmovie={setSearchmovie} setRating={setRating}/>
                   <div className='container-fluid  movie-app '>
-                
                   
-                  <Switch>
-                        <div className='row   justify-content-around'>  
-                        <Route exact path='/' >
-                        <MovieList movies={movies} searchmovie={searchmovie} rating={rating}  search={searchmovie} rate={movies.rate}/>
-                        </Route>
-                        {/* <Route exact path ='/DescriptionMovie' component={DescriptionMovie}/> */}
-                        
-                        {/* <Route component={ErrorPage}/> */}
-                        
-                        <Route path="/DescriptionMovie/:movie" render ={(props) =>
-                          <DescriptionMovie movies={movies} {...props} /> }/>
-                        </div>
-                  </Switch>
+                <Switch>
+                      <div className='row   justify-content-around'>  
+                      <Route exact path='/' >
+                      <MovieList movies={movies} searchmovie={searchmovie} rating={rating}  search={searchmovie} rate={movies.rate}/>
+                      </Route>
+                      <Route path="/DescriptionMovie/:movie" render ={(props) =>
+                        <DescriptionMovie movies={movies} {...props} /> }/> 
+                      <Route/>
+                      </div>
+                </Switch>
                   </div>
-                  <div style={{textAlign:'center', marginBottom:'10px', padding:'50px' }}>
+                  <div style={{textAlign:'center', marginBottom:'10px', padding:'50px', marginTop:'20px', borderTop:'1px solid gold' }}>
                               <AddMovie AddNewmovie={AddNewmovie} />
                   </div>
-                  
                   </div>
       </BrowserRouter>
       );

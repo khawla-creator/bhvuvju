@@ -16,11 +16,10 @@ const MovieList =({movies,searchmovie,rating, movie})=> {
                                                             <img src={movie.posterUrl} alt='movies' style={{width:'200', height:'200px'}} />
                                                             <h4> {movie.title} </h4>
                                                             <p>{movie.description}</p>
-                                                            {/* ici je met un lien  */}
-                                                            <Link to={`/DescriptionMovie/${movie.title}`} >  
+                                                            <Link className='act' to={`/DescriptionMovie/${movie.title}`} >  
                                                                                 <div className='d-flex flex-column align-items-center'> 
                                                                                 <img src={Logo} alt='see more' width='35px'/>
-                                                                                <span style={{color:'white' ,fontSize:'1.2em', textDecoration:'none'}}> See More ? </span>
+                                                                                <span id='spanne' style={{color:'white' ,fontSize:'1.2em', textDecoration:'none'}}> See More ? </span>
                                                                                 </div>
                                                             </Link>
                                                             <ReactStars

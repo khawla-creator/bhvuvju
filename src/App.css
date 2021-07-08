@@ -76,14 +76,38 @@ p, h4 {
   border-bottom: 1px solid gold;
 }
 
-/* .movie-app > .row
-{
-  overflow-x: auto;
-  flex-wrap: nowrap;
-} */
+
 
 .active:hover {
   color:rgb(245, 38, 38);
   text-decoration: none;
 }
+
+.background
+{
+  background-color: #5f5c5cce;
+  border-radius: 7px;
+  padding: 20px;
+  width: 700px;
+} 
+
+.description
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
+  font-size: 2em;
+  font-family: Cambria;
+}
+
+.act:hover {
+  text-decoration: none;
+  font-size: large;
+}
+
+
+
+
 
