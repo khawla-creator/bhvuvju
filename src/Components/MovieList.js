@@ -17,7 +17,7 @@ const MovieList =({movies,searchmovie,rating, movie})=> {
                                                             <h4> {movie.title} </h4>
                                                             <p>{movie.description}</p>
                                                             {/* ici je met un lien  */}
-                                                            <Link to='/DescriptionMovie'>  
+                                                            <Link to={`/DescriptionMovie/${movie.title}`} >  
                                                                                 <div className='d-flex flex-column align-items-center'> 
                                                                                 <img src={Logo} alt='see more' width='35px'/>
                                                                                 <span style={{color:'white' ,fontSize:'1.2em', textDecoration:'none'}}> See More ? </span>
